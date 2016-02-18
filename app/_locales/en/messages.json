@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "ansi colors chrome extension",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Converts ANSI excape characters to colors on current page, useful when viewing log files within chrome",
+    "description": "The description of the application"
+  }
+}
