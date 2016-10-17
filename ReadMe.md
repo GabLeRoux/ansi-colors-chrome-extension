@@ -8,6 +8,7 @@ Chrome extension that converts ANSI characters to colors on the fly / on button 
 
 - [ ] figure out how to pass data to [ansi-html-stream][ansi-html-stream] (using a stream? maybe I should find a different solution)
 - [x] Provide ansi stripping capability [strip-ansi][strip-ansi]
+- [ ] Add support for colors instead of stripping colors
 - [ ] create an icon
 - [ ] publish
 
