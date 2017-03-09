@@ -58,6 +58,26 @@ Then you're good to go!
 * This plugin uses [browserify][browserify] in a chrome extension and it works!
 * The plugin was created using [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
 
+```bash
+# install gulp and dependencies
+npm i -g gulp && npm i
+
+# Transform updated source written by ES2015 (default option)
+gulp babel
+
+# or Using watch to update source continuously
+gulp watch
+
+# Make a production version extension
+gulp build
+
+# compress and prepare for the chrome web store (after gulp build)
+gulp package
+```
+
+## Problems? Questions?
+See [issues](https://github.com/GabLeRoux/ansi-colors-chrome-extension/issues/)
+
 ## License
 
 MIT © [Gabriel Le Breton](https://gableroux.com/)
