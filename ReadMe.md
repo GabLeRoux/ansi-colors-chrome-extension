@@ -42,7 +42,14 @@ Total states run: 24
 
 ## Installation
 
-Until this is deployed to the Chrome web store, you can grab a build in the releases tab.
+Until this is deployed to the Chrome web store, you can do this:
+
+1. Download latest zip file in [the releases tab](https://github.com/GabLeRoux/ansi-colors-chrome-extension/releases).
+2. Unzip the the file
+3. Open [chrome://extensions](chrome://extensions)
+4. Drag n drop the folder of the plugin
+
+Have fun! :v:
 
 ## Contributing
 
@@ -54,11 +61,11 @@ Until this is deployed to the Chrome web store, you can grab a build in the rele
 
 1. Clone the repository
 2. Build or watch (see commands section)
-2. Open [chrome://extensions](chrome://extensions)
-3. Check the Developer mode checkbox
+3. Open [chrome://extensions](chrome://extensions)
+4. Check the Developer mode checkbox
 ![chrome-extensions](https://cloud.githubusercontent.com/assets/1264761/23734467/40ac4e3a-044d-11e7-8ef6-d5f3a043767a.png)
-4. Hit `Load unpacked extension...` button
-5. Select the `dist` folder (which contains the `manifest.json` file)
+5. Hit `Load unpacked extension...` button
+6. Select the `dist` folder (which contains the `manifest.json` file)
 
 ### Commands
 
