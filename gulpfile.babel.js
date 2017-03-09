@@ -1,10 +1,9 @@
-// generated on 2016-02-11 using generator-chrome-extension 0.5.2
-var gulp = require('gulp');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var del = require('del');
-var runSequence = require('run-sequence');
-var wiredep = require('wiredep');
-var browserify = require('gulp-browserify');
+// generated on 2017-03-09 using generator-chrome-extension 0.6.1
+import gulp from 'gulp';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import del from 'del';
+import runSequence from 'run-sequence';
+import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 
@@ -22,14 +21,6 @@ gulp.task('extras', () => {
 });
 
 function lint(files, options) {
-  return () => {
-    return gulp.src(files)
-      .pipe($.eslint(options))
-      .pipe($.eslint.format());
-  };
-}
-
-function browseri(files, options) {
   return () => {
     return gulp.src(files)
       .pipe($.eslint(options))
@@ -60,17 +51,13 @@ gulp.task('images', () => {
 });
 
 gulp.task('html',  () => {
-  const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
-
   return gulp.src('app/*.html')
-    .pipe(assets)
+    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.sourcemaps.init())
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+    .pipe($.if('*.css', $.cleanCss({compatibility: '*'})))
     .pipe($.sourcemaps.write())
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe($.if('*.html', $.htmlmin({removeComments: true, collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -85,7 +72,7 @@ gulp.task('chromeManifest', () => {
         ]
       }
   }))
-  .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+  .pipe($.if('*.css', $.cleanCss({compatibility: '*'})))
   .pipe($.if('*.js', $.sourcemaps.init()))
   .pipe($.if('*.js', $.uglify()))
   .pipe($.if('*.js', $.sourcemaps.write('.')))
@@ -97,16 +84,12 @@ gulp.task('babel', () => {
       .pipe($.babel({
         presets: ['es2015']
       }))
-      .pipe(browserify({
-        insertGlobals : true,
-        debug : !gulp.env.production
-      }))
       .pipe(gulp.dest('app/scripts'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('watch', ['lint', 'babel', 'html'], () => {
+gulp.task('watch', ['lint', 'babel'], () => {
   $.livereload.listen();
 
   gulp.watch([
