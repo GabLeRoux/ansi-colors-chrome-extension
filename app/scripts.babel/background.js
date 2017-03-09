@@ -11,8 +11,8 @@ chrome.tabs.onUpdated.addListener(tabId => {
 // executes colorize action on button click :)
 chrome.browserAction.onClicked.addListener(tab => {
   // No tabs or host permissions needed!
-  console.log('Turning ' + tab.url + ' red!');
+  console.log('Stripping ansi colors for ' + tab.url);
   chrome.tabs.executeScript({
-    file: 'scripts/colorize.js'
+    file: 'scripts/strip.js'
   });
 });

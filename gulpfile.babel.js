@@ -4,8 +4,17 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import runSequence from 'run-sequence';
 import {stream as wiredep} from 'wiredep';
+import browserify from 'gulp-browserify'
 
 const $ = gulpLoadPlugins();
+
+function browseri(files, options) {
+  return () => {
+    return gulp.src(files)
+      .pipe($.eslint(options))
+      .pipe($.eslint.format());
+  };
+}
 
 gulp.task('extras', () => {
   return gulp.src([
@@ -83,6 +92,10 @@ gulp.task('babel', () => {
   return gulp.src('app/scripts.babel/**/*.js')
       .pipe($.babel({
         presets: ['es2015']
+      }))
+      .pipe(browserify({
+        insertGlobals : true,
+        debug : !gulp.env.production
       }))
       .pipe(gulp.dest('app/scripts'));
 });

@@ -19,6 +19,10 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["scripts/colorize.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/strip.js"]
     }
   ],
   "permissions": [

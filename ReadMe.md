@@ -42,21 +42,25 @@ Total states run: 24
 
 ## Installation
 
-Until this is deployed to the Chrome web store, right now, you can do this:
-1. Clone the repository or hit the download button
-2. Open [chrome://extensions](chrome://extensions)
-3. Check the Developer mode checkbox
-![chrome-extensions](https://cloud.githubusercontent.com/assets/1264761/23734467/40ac4e3a-044d-11e7-8ef6-d5f3a043767a.png)
-4. Hit `Load unpacked extension...` button
-5. Select the `app` folder where you download the extension (which contains the `manifest.json` file)
-
-Then you're good to go!
+Until this is deployed to the Chrome web store, you can grab a build in the releases tab.
 
 ## Contributing
 
 * Pull requests are welcome! Please contribute :rocket:
 * This plugin uses [browserify][browserify] in a chrome extension and it works!
 * The plugin was created using [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
+
+## Development and requirements
+
+1. Clone the repository
+2. Build or watch (see commands section)
+2. Open [chrome://extensions](chrome://extensions)
+3. Check the Developer mode checkbox
+![chrome-extensions](https://cloud.githubusercontent.com/assets/1264761/23734467/40ac4e3a-044d-11e7-8ef6-d5f3a043767a.png)
+4. Hit `Load unpacked extension...` button
+5. Select the `dist` folder (which contains the `manifest.json` file)
+
+### Commands
 
 ```bash
 # install gulp and dependencies
@@ -74,6 +78,8 @@ gulp build
 # compress and prepare for the chrome web store (after gulp build)
 gulp package
 ```
+
+More details at [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
 
 ## Problems? Questions?
 See [issues](https://github.com/GabLeRoux/ansi-colors-chrome-extension/issues/)
