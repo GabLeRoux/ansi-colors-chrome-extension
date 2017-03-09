@@ -6,7 +6,7 @@ Chrome extension that converts ANSI characters to colors on the fly / on button 
 
 ## Motivation
 
-I once used to run [salt](https://saltstack.com/) commands with [jenkins](https://jenkins.io/), which outputs colored data by default. There's a [jenkins plugin for this](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), but I tought **why not a plugin for chrome itself?** Here it is :)
+I once used to run [salt](https://saltstack.com/) commands with [jenkins](https://jenkins.io/), which outputs colored data by default, but it gets unreadable in a webpage! There's a [jenkins plugin for this](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), but I tought **why not a plugin for chrome itself?** Here it is :)
 
 Here's a related blog post I wrote about ansi characters and colors:
 [Keep saltstack colored output](https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/)
@@ -19,10 +19,7 @@ Here's a related blog post I wrote about ansi characters and colors:
 - [ ] Create an icon
 - [ ] Publish
 
-## Notes
-
-* Uses [browserify][browserify] in a chrome extension and it works!
-* Pull requests are welcome! Please contribute :rocket:
+## Usage
 
 Right now, hitting extension button can convert from this:
 ```
@@ -54,6 +51,16 @@ Until this is deployed to the Chrome web store, right now, you can do this:
 5. Select the `app` folder where you download the extension (which contains the `manifest.json` file)
 
 Then you're good to go!
+
+## Contributing
+
+* Pull requests are welcome! Please contribute :rocket:
+* This plugin uses [browserify][browserify] in a chrome extension and it works!
+* The plugin was created using [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
+
+## License
+
+MIT © [Gabriel Le Breton](https://gableroux.com/)
 
 [strip-ansi]: https://github.com/chalk/strip-ansi
 [ansi-html-stream]: https://github.com/hughsk/ansi-html-stream
