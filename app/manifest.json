@@ -1,6 +1,6 @@
 {
   "name": "ansi-colors-chrome-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Renders ansi escape characters on current page (ex: a log file with ansi colors viewed in chrome)",
   "icons": {
