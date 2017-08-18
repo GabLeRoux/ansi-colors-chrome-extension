@@ -1,4 +1,4 @@
-# ANSI Colors chrome extension
+# [ANSI Colors chrome extension](https://chrome.google.com/webstore/detail/hpkomngllcnigoocaolicfknnhibnmfi/)
 
 Chrome extension that converts ANSI characters to colors on the fly / on button click for the lazy ones. Does what [ansi-html-stream][ansi-html-stream] does but within browser.
 
@@ -13,11 +13,11 @@ Here's a related blog post I wrote about ansi characters and colors:
 
 ## Todo
 
-- [ ] Figure out how to pass data to [ansi-html-stream][ansi-html-stream] (using a stream? maybe I should find a different solution)
-- [x] Provide ansi stripping capability [strip-ansi][strip-ansi]
+- [ ] Figure out how to pass data to [ansi-html-stream][ansi-html-stream] (using a stream? maybe I should find a different solution) See #1 help needed!
 - [ ] Add support for colors instead of stripping colors
 - [ ] Create an icon
-- [ ] Publish
+- [x] Provide ansi stripping capability [strip-ansi][strip-ansi] :tada:
+- [x] Publish
 
 ## Usage
 
@@ -42,7 +42,11 @@ Total states run: 24
 
 ## Installation
 
-Until this is deployed to the Chrome web store, you can do this:
+### From the chrome webstore
+
+[ANSI Colors chrome extension](https://chrome.google.com/webstore/detail/hpkomngllcnigoocaolicfknnhibnmfi/)
+
+### Manually from releases page
 
 1. Download latest zip file in [the releases tab](https://github.com/GabLeRoux/ansi-colors-chrome-extension/releases).
 2. Unzip the the file
