@@ -1,5 +1,7 @@
 # [ANSI Colors chrome extension](https://chrome.google.com/webstore/detail/hpkomngllcnigoocaolicfknnhibnmfi/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GabLeRoux/ansi-colors-chrome-extension.svg)](https://greenkeeper.io/)
+
 Chrome extension that converts ANSI characters to colors on the fly / on button click for the lazy ones. Does what [ansi-html-stream][ansi-html-stream] does but within browser.
 
 *Work in progress* (pressing on button currently strip ansi characters for now) :P
