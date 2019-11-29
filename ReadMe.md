@@ -1,23 +1,25 @@
 # ANSI Colors chrome extension
 
-Chrome extension that converts ANSI characters to colors on the fly / on button click for the lazy ones. Does what [ansi-html-stream][ansi-html-stream] does but within browser.
+Chrome extension that converts ANSI characters to colors on the fly / on button click for the lazy ones.
 
 *Work in progress* (pressing on button currently strip ansi characters for now) :P
 
+## What it does
+
+- [x] Provide ansi stripping capability using [chalk/strip-ansi][chalk/strip-ansi]
+- [x] Convert ansi to html using [rburns/ansi-to-html][rburns/ansi-to-html]
+
 ## Motivation
 
-I once used to run [salt](https://saltstack.com/) commands with [jenkins](https://jenkins.io/), which outputs colored data by default, but it gets unreadable in a webpage! There's a [jenkins plugin for this](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), but I tought **why not a plugin for chrome itself?** Here it is :)
+I used to run [salt](https://saltstack.com/) commands with [jenkins](https://jenkins.io/), which outputs colored data by default, but it's hard to read on a webpage! There's a [jenkins plugin for this](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), but we can fix this at a higher level so here's a solution: browser extension!
 
-Here's a related blog post I wrote about ansi characters and colors:
+Here's a related blog post I wrote about ansi characters and colors:  
 [Keep saltstack colored output](https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/)
 
 ## Todo
 
-- [ ] Figure out how to pass data to [ansi-html-stream][ansi-html-stream] (using a stream? maybe I should find a different solution)
-- [x] Provide ansi stripping capability [strip-ansi][strip-ansi]
 - [ ] Add support for colors instead of stripping colors
 - [ ] Create an icon
-- [ ] Publish
 
 ## Usage
 
@@ -95,6 +97,6 @@ See [issues](https://github.com/GabLeRoux/ansi-colors-chrome-extension/issues/)
 
 MIT © [Gabriel Le Breton](https://gableroux.com/)
 
-[strip-ansi]: https://github.com/chalk/strip-ansi
-[ansi-html-stream]: https://github.com/hughsk/ansi-html-stream
+[chalk/strip-ansi]: https://github.com/chalk/strip-ansi
+[rburns/ansi-to-html]: https://github.com/rburns/ansi-to-html
 [browserify]: http://browserify.org/
