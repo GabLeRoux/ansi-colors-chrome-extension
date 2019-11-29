@@ -3,12 +3,12 @@
 // This is currently called on extension button click
 
 // @see https://github.com/hughsk/ansi-html-stream
-var ansi = require('ansi-html-stream');
+//var ansi = require('ansi-html-stream');
 var stripAnsi = require('strip-ansi');
 
 // var fs = require('fs');
 
-var stream = ansi({chunked: false});
+//var stream = ansi({chunked: false});
 
 // the only thing that currently work
 // We get the document and strip ansi content :)
