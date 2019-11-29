@@ -1,9 +1,8 @@
 'use strict';
 
-// this is executed at every page load, would be nice to detect ansi chars and colorize here ;)
+var Convert = require('ansi-to-html');
+var convert = new Convert();
 
-// @see https://github.com/hughsk/ansi-html-stream
-var ansi = require('ansi-html-stream');
-var stripAnsi = require('strip-ansi');
-
-console.log('todo: locate and colorize ANSI things!');
+console.log('About to convert ANSI characters to html!');
+document.body.innerText = convert.toHtml(document.body.textContent);
+console.log('Done!');
