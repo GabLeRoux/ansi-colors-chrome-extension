@@ -72,21 +72,34 @@ Have fun! :v:
 
 ### Commands
 
+Install dependencies
+
 ```bash
-# install gulp and dependencies
-npm i -g gulp && npm i
+npm i
+```
 
-# Transform updated source written by ES2015 (default option)
-gulp babel
+Transform updated source written by ES2015 (default option)
 
-# or Using watch to update source continuously
-gulp watch
+```bash
+npm run gulp-babel
+```
 
-# Make a production version extension
-gulp build
+or Using watch to update source continuously
 
-# compress and prepare for the chrome web store (after gulp build)
-gulp package
+```bash
+npm run watch
+```
+
+Make a production version extension
+
+```bash
+npm run build
+```
+
+Compress and prepare for the chrome web store package (after `npm run build`)
+
+```bash
+npm run package
 ```
 
 More details at [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
