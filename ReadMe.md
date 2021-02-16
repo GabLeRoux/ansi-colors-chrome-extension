@@ -13,7 +13,6 @@ Here's a related blog post I wrote about ansi characters and colors:
 
 ## Todo
 
-- [ ] Figure out how to pass data to [ansi-html-stream][ansi-html-stream] (using a stream? maybe I should find a different solution) See #1 help needed!
 - [ ] Add support for colors instead of stripping colors
 - [ ] Create an icon
 - [x] Provide ansi stripping capability [strip-ansi][strip-ansi] :tada:
