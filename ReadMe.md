@@ -15,6 +15,8 @@ Here's a related blog post I wrote about ansi characters and colors:
 
 - [ ] Add support for colors instead of stripping colors
 - [ ] Create an icon
+- [ ] Upgrade all packages
+- [ ] Upgrade node base version (you need node 8 to build this project)
 - [x] Provide ansi stripping capability [strip-ansi][strip-ansi] :tada:
 - [x] Publish
 
@@ -48,7 +50,7 @@ Total states run: 24
 ### Manually from releases page
 
 1. Download latest zip file in [the releases tab](https://github.com/GabLeRoux/ansi-colors-chrome-extension/releases).
-2. Unzip the the file
+2. Unzip the file somewhere on your computer
 3. Open [chrome://extensions](chrome://extensions)
 4. Drag n drop the folder of the plugin
 
